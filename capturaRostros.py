@@ -2,15 +2,15 @@ import cv2
 import os
 import imutils
 
-personName = 'Bruno'
-dataPath = 'G:/Proyectos/InteligenciaArtificial/facial_recognition/data'
+personName = 'Manolo'
+dataPath = '/Users/admin/Documents/PROJECTS/IA/camaras_ia/data'
 personPath = dataPath + '/' + personName
 
 if not os.path.exists(personPath):
 	print('Carpeta creada: ',personPath)
 	os.makedirs(personPath)
 
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 count = 0

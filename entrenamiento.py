@@ -2,9 +2,10 @@ import cv2
 import os
 import numpy as np
 
-dataPath = 'G:/Proyectos/InteligenciaArtificial/facial_recognition/data'
+dataPath = '/Users/admin/Documents/PROJECTS/IA/camaras_ia/data'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
+peopleList = [person for person in peopleList if person != '.DS_Store']
 
 labels = []
 facesData = []
@@ -15,6 +16,8 @@ for nameDir in peopleList:
 	print('Leyendo las imágenes')
 
 	for fileName in os.listdir(personPath):
+		if fileName == '.DS_Store':
+			continue
 		print('Rostros: ', nameDir + '/' + fileName)
 		labels.append(label)
 		facesData.append(cv2.imread(personPath+'/'+fileName,0))
