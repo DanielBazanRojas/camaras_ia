@@ -2,7 +2,7 @@ import cv2
 import os
 import imutils
 
-personName = 'Manolo'
+personName = 'Stephano'
 dataPath = '/Users/admin/Documents/PROJECTS/IA/camaras_ia/data'
 personPath = dataPath + '/' + personName
 

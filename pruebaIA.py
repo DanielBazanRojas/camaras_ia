@@ -1,13 +1,12 @@
 import cv2
 import os
 
-dataPath = '/Users/admin/Documents/PROJECTS/IA/camaras_ia/data' #Cambia a la ruta donde hayas almacenado Data
+dataPath = '/Users/admin/Documents/PROJECTS/IA/camaras_ia/data'
 imagePaths = [f for f in os.listdir(dataPath) if not f.startswith('.')]
 print('imagePaths=',imagePaths)
 
 face_recognizer = cv2.face.FisherFaceRecognizer_create()
 
-# Leyendo el modelo
 face_recognizer.read('modeloFisherFace.xml')
 
 cap = cv2.VideoCapture(0)
